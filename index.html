@@ -1,3 +1,199 @@
-Kva med desse?<br>
-<br>
-<img src="https://i.pinimg.com/originals/61/57/88/615788ce5a878f4ef7829c17b8e54d47.jpg">
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" http-equiv="refresh" content="300" name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+  <title>Vêr, is, nordlys og slikt</title>
+</head>
+<style>
+  #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  z-index: 99;
+  font-size: 18px;
+  font-family: sans-serif;
+  border: line;
+  outline: white;
+  background-color: #a5240b;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 0px;
+}
+  #myBtn:hover {
+  background-color: #841d09;
+}
+</style>
+<script>
+  function startTime() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1;
+  var yyyy = today.getFullYear();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  dd = checkTime(dd);
+  mm = checkTime(mm);
+  yyyy = checkTime(yyyy);
+  h = checkTime(h);
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('datetime').innerHTML =
+  dd + "." + mm + "." + yyyy + " - " + h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+  function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<body onload="startTime()" style="font-family:sans-serif; margin:20px; background:grey; text-align:center">
+<button onclick="topFunction()" id="myBtn" title="Se opp">Hopp til topp</button>
+  <table style="width:100%; background:white; margin:0px">
+      <tr>
+  	    <td style="font-family:sans-serif; width:20%; background:yellow; color:black"><h4><div id="datetime"></h4><button onClick="window.location.reload();">Last inn sida på nytt</button></div></td>
+  	    <td style="background:white; text-align:left">
+  	       <div style="margin-left:40px; width:60%"><h1>Vêr, is, nordlys og slikt</h1><p>Sida oppdaterast automatisk kvart 5. minutt</p></div>
+  	    </td>
+		<td style="text-align:left; background:yellow; width:20%">
+		<div style="margin-left:40px">
+		<a href="#svalbard">Iskart - Svalbard og Isfjorden</a><br>
+		<a href="#oversikt">Iskart - Oversiktskart</a><br>
+		<a href="#sarmosaic">SAR mosaic - Satelittbilete</a><br>
+		<a href="#nordlys">Er det nordlys ute?</a>
+		</div>
+		</td>
+      </tr>  
+  </table> 
+  <br>
+  <div style="font-family:sans-serif; overflow-x:auto">
+  <table style="width:100%; background:white; margin:0px">
+    <tr>
+	   <td style="text-align:center; background:white"><div style="margin-left: 0px"><p>Meteogram for Platåberget. Klikk for å gå til <a href="https://www.yr.no/sted/Norge/Svalbard/Plat%C3%A5berget/time_for_time_detaljert.html" target="_blank">yr.no</a></p></div>
+	      <div><a href="https://www.yr.no/sted/Norge/Svalbard/Plat%C3%A5berget/time_for_time_detaljert.html" target="_blank">
+	      <img src="https://jtimeseries.met.no/jtimeseries-webservices/meteogram?format=png&width=950&height=300&latitude=78.2185&longitude=15.4519&temperature=true&pressure=true&percipitation=true&windSymbol=true&weatherSymbol=true&cloudSymbol=true&windSpeed=true&windDirection=true&windSpeedUnit=ms&dewpointTemperature=true&timezone=UTC&term=short&language=nn&random=1575108992583" alt="Meteogram ikkje funnet" onerror="this.src='https://www.yr.no/sted/Norge/Svalbard/Plat%C3%A5berget/avansert_meteogram.png';"style="width:900px"></image></div>		  
+	   </td>
+	   <td><p>Langtidsvarsel</p>
+		  <div><a href="https://www.yr.no/sted/Norge/Svalbard/Plat%C3%A5berget/time_for_time_detaljert.html" target="_blank">
+          <img src="https://jtimeseries.met.no/jtimeseries-webservices/meteogram?format=png&width=950&height=300&latitude=78.2185&longitude=15.4519&temperature=true&pressure=true&percipitation=true&windSymbol=true&weatherSymbol=true&cloudSymbol=true&windSpeed=true&windDirection=true&windSpeedUnit=ms&dewpointTemperature=true&timezone=UTC&term=long&language=nn&random=1575108992583" alt="Meteogram ikkje funnet" onerror="this.src='https://www.yr.no/sted/Norge/Svalbard/Plat%C3%A5berget/avansert_meteogram.png';"style="width:900px"></image></div>
+	   </td>
+    </tr>
+  </table>
+  </div>
+  <br>
+  <table style="font-family:sans-serif; background:#c8c8c8; color:black; text-align:'center'; width:100%">
+    <tr>
+	  <td>
+	  <p>Oppdaterte iskart kjem kvar vekedag etter kl 1500 UTC. Meir om is frå <a href="https://cryo.met.no/en/sea-ice" target="_blank">Meteorologisk Institutt</a></p>
+	  <p>Trykk på kart for å opne i ny fane.</p></td>
+	</tr>
+  </table>
+  <table style="font-family:sans-serif; background:white; color:black; text-align:'center'">
+	 <tr>
+	  <td style="width:50%" id="svalbard">
+        <h3>Svalbard</h3>
+        <div><a href="https://cryo.met.no/sites/cryo.met.no/files/latest/svalbard_latest.png" target="_blank">
+		<img style="width:100%" src="https://cryo.met.no/sites/cryo.met.no/files/latest/svalbard_latest.png" alt="Bilete ikkje funnet"></a>
+		</div>
+      </td>
+	  <td></td>
+      <td style="width:50%">
+        <h3>Isfjorden</h3>
+        <div><a href="https://cryo.met.no/sites/cryo.met.no/files/latest/isfjorden_latest.png" target="_blank">
+		<img style="width:100%" src="https://cryo.met.no/sites/cryo.met.no/files/latest/isfjorden_latest.png" alt="Bilete ikkje funnet"></a>
+		</div>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table style="font-family:sans-serif; width:100%; background:white; color:black; text-align:center" id="oversikt">
+    <tr>
+      <td>
+		<h3>Oversikt</h3>
+		<div style="text-align:center"><a href="https://cryo.met.no/sites/cryo.met.no/files/latest/general_latest.png" target="_blank">
+		<img style="width:100%" src="https://cryo.met.no/sites/cryo.met.no/files/latest/general_latest.png" alt="Bilete ikkje funnet"></a>
+		</div>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table style="font-family:sans-serif; width:100%; background:white; color:black; text-align:center" id="sarmosaic">
+    <tr>
+      <td>
+		<h3>SAR Mosaic - Sentinel-1 | <a href="https://cryo.met.no/sites/cryo.met.no/files/latest/SAR-mosaic-yesterday.png" target="_blank">Gårsdagens bilete</a></h3>
+		<br>
+		<div style="text-align:center"><a href="https://cryo.met.no/sites/cryo.met.no/files/latest/SAR-mosaic-latest.png" target="_blank">
+		<img style="width:100%" src="https://cryo.met.no/sites/cryo.met.no/files/latest/SAR-mosaic-latest.png" alt="Bilete ikkje funnet"></a>
+		</div>
+      </td>
+    </tr>
+  </table>
+  <script>
+    //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 100px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <br>
+  <div style="overflow-x:auto">
+  <table style="width:100%">
+  <tr>
+  <td>
+	<div style="float:left; margin-right:20px; margin-bottom:20px">
+	<table style="width:100%; background:#c8c8c8; color:black">
+	<tr>
+		<td><p>Nordlysvarsel</p></td>
+	</tr>
+	<tr>
+		<td style="width:100%; background:black; color:white"><img src="http://kho.unis.no/Quicklooks/SvalTrackII/kho.jpg" alt="Bilete ikkje funnet" style="width:100%"></td>	   
+	<tr>
+	</table></div>
+	
+	<div style="float:left; margin-right:20px; margin-bottom:20px">
+	<table id="nordlys" style="font-family:sans-serif; width:100%; background:#c8c8c8; color:black; text-align:'center'">
+	<tr>
+		<td style="width:50%"><p>KHO DSLR</p></td>
+	</tr>
+	<tr>
+		<td style="width:80%; background:black; color:white"><img src="http://kho.unis.no/Quicklooks/kho_sony.png" alt="Bilete ikkje funnet" style="height:95%"></td>
+	</tr>
+  </table>
+  </div>
+  
+	<div style="float:left; margin-right:20px; margin-bottom:20px">
+	<table id="nordlys" style="font-family:sans-serif; width:100%; background:#c8c8c8; color:black; text-align:'center'">
+	<tr>
+		<td style="width:100%"><p>KHO Infrared Imager</p></td>
+	</tr>
+	<tr>
+		<td style="width:100%; background:black; color:white"><img src="http://kho.unis.no/Quicklooks/KeoSentry4ix/KeoSentry4ix_RGB.jpg" alt="Bilete ikkje funnet" style="width:100%"></td>
+	</tr>
+  </table>
+  </div>  
+  
+  </td></tr></table></div>
+
+</body>
+</html>
