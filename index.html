@@ -29,12 +29,12 @@
 <script>
   function startTime() {
   var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth()+1;
-  var yyyy = today.getFullYear();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
+  var dd = today.getUTCDate();
+  var mm = today.getUTCMonth()+1;
+  var yyyy = today.getUTCFullYear();
+  var h = today.getUTCHours();
+  var m = today.getUTCMinutes();
+  var s = today.getUTCSeconds();
   dd = checkTime(dd);
   mm = checkTime(mm);
   yyyy = checkTime(yyyy);
